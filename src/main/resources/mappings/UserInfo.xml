@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yumeng.spring.transaction.UserInfoDao">
+
+	<resultMap id="UserInfoResultMap"
+		type="com.yumeng.spring.transaction.UserInfo">
+		<result column="ID" property="id" />
+		<result column="USER_NAME" property="userName" />
+		<result column="PASS_WORD" property="passWord" />
+	</resultMap>
+	
+	<!-- <select id="get" resultMap="UserInfoResultMap"
+		parameterType="String">
+		select * from USER_INFO
+		where ID = #{value}
+	</select>
+	
+	
+	<insert id="add" parameterType="com.yumeng.spring.transaction.UserInfo">
+		insert into USER_INFO(ID,USER_NAME,PASS_WORD) values (#{id},#{userName} #{passWord})
+	</insert> -->
+
+	<update id="update" parameterType="com.yumeng.spring.transaction.UserInfo">
+		update USER_INFO set
+		USER_NAME=#{userName}
+		where ID = #{id}
+	</update>
+
+	
+</mapper>

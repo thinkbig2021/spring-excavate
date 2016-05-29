@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.1.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+	http://www.springframework.org/schema/aop  
+    http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
+
+	<!-- 扫描@Controller以外的注解 -->
+	<context:component-scan base-package="com.yumeng.spring.aop">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	<context:annotation-config />
+	<!-- expose-proxy=true 用于把代理对象放到当前AopContext.currentProxy();里面去 -->
+	<aop:aspectj-autoproxy expose-proxy="true"
+		proxy-target-class="true" />
+	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<!--②-1属性编辑器对应的属性类型 -->
+				<entry key="com.yumeng.spring.propertyeditor.Car" value="com.yumeng.spring.propertyeditor.CustomCarEditor">
+				</entry>
+            </map>
+
+		</property>
+
+	</bean>
+    <!-- <bean id="cust" class="com.yumeng.spring.propertyeditor.CustomCarEditor" autowire="byType"/> -->
+	<bean id="mycar" class="com.yumeng.spring.propertyeditor.MyCar">
+		<property name="car" value="11111,222,333" />
+	</bean>
+
+</beans>
