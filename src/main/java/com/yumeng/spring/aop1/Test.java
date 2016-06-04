@@ -10,7 +10,7 @@ public class Test {
 	            new ClassPathXmlApplicationContext("com/yumeng/spring/aop1/spring-context.xml");
 		TestAspect test =(TestAspect)ctx.getBean("testAspect");
 		//ctx.publishEvent(event);
-	   test.test1("yumeng");
+	   test.test1("aa");
 	}
 
 }

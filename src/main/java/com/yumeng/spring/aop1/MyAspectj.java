@@ -18,21 +18,23 @@ public class MyAspectj {
 		System.out.println("方法执行开始");
 		
 	}
-	public void after(JoinPoint point){
+	public void after(String t,String arg2,String arg3){
 		System.out.println("方法执行完毕");
+	}
+	public void after1(JoinPoint point){
+		System.out.println("after");
 	}
 
 	public void around(ProceedingJoinPoint point) throws Throwable{
 		System.out.println("around");
-		point.proceed();
+		//point.proceed();
 	}
-	public void afterreturn(JoinPoint jp, Object rtv){
+	public void afterreturn(String rtv,String myname){
 		System.out.println(rtv);
 		System.out.println(11);
 		
 	}
-	public void afterThrow(JoinPoint joinPoint, Exception ex){
-		 System.out.println("hello");
-		ex.printStackTrace();
-		}
+	public void afterThrow(Throwable ex){
+		System.out.println("afterThrow");;
+	}
 }
