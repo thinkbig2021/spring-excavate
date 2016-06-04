@@ -1,11 +1,12 @@
 package com.yumeng.spring.transaction;
 
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TransactionTest {
 
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+		ApplicationContext context = new ClassPathXmlApplicationContext(
 				new String[] { "spring/spring-context.xml" });
 		UserInfoService userInfoService = (UserInfoService)context.getBean("userInfoService");
 		UserInfo user = new UserInfo();

@@ -19,7 +19,7 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 		<property name="basePackage" value="com.yumeng" />
-		<property name="annotationClass" value="com.hzzhibitech.framework.core.dao.annotation.MyBatisDao" />
+		<property name="annotationClass" value="com.zhibitech.framework.core.dao.annotation.MyBatisDao" />
 	</bean>
 
 </beans>
