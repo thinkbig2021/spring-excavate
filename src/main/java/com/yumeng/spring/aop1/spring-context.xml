@@ -22,11 +22,12 @@
 	<aop:aspectj-autoproxy expose-proxy="true"
 		proxy-target-class="true" />
 	<bean id="testAspect" class="com.yumeng.spring.aop1.TestAspect" />
+	<bean id="testAspect1" class="com.yumeng.spring.aop1.aop.TestAspect" />
 	<bean id="myAspectj" class="com.yumeng.spring.aop1.MyAspectj" />
 	<aop:config>
 		<aop:pointcut expression="execution(* com.yumeng.spring.aop1..*.test(..))"
 			id="pointcut1" />
-		<aop:pointcut expression="execution(* com.yumeng.spring.aop1.TestAspect.test1(..))"
+		<aop:pointcut expression="execution(* com.yumeng.spring.aop1..*.test1(..))"
 			id="pointcut2" />
 		<aop:pointcut expression="execution(* com.yumeng.spring.aop1..*.test2(..)) and args(arg1,arg2,arg3)"
 			id="pointcut3" />
