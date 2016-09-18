@@ -40,7 +40,7 @@ public class Test {
 		try {
 			Class test = Class.forName("com.yumeng.spring.bean.bind.Test");
 			Method add = test.getDeclaredMethod("add", null);
-			System.out.println(add.getReturnType().getTypeName());
+			System.out.println(add.getReturnType().getName());
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

@@ -24,3 +24,8 @@
 2016-06-04 19:47:26 org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCommit(SqlSessionUtils.java:261)-[DEBUG] Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5dd1c9f2] -(:261)
 2016-06-04 19:47:26 org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:287)-[DEBUG] Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5dd1c9f2] -(:287)
 2016-06-04 19:47:26 org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:292)-[DEBUG] Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5dd1c9f2] -(:292)
+2016-06-20 19:38:52 com.yumeng.spring.netty1.StringDecoder.channelRead(StringDecoder.java:17)-[INFO] StringDecoder : msg's type is class io.netty.handler.codec.http.DefaultHttpRequest -(:17)
+2016-06-20 19:38:52 com.yumeng.spring.netty1.StringDecoder.channelRead(StringDecoder.java:17)-[INFO] StringDecoder : msg's type is class io.netty.handler.codec.http.DefaultLastHttpContent -(:17)
+2016-06-20 19:38:52 com.yumeng.spring.netty1.StringDecoder.channelRead(StringDecoder.java:29)-[INFO] StringDecoder : change httpcontent to string  -(:29)
+2016-06-20 19:38:52 com.yumeng.spring.netty1.BusinessHandler.channelRead(BusinessHandler.java:14)-[INFO] BusinessHandler read msg from client :client said : Are you ok? -(:14)
+2016-06-20 19:38:52 com.yumeng.spring.netty1.StringEncoder.write(StringEncoder.java:25)-[INFO] StringEncoder response to client. -(:25)
