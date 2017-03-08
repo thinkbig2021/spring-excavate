@@ -25,11 +25,11 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>com.zhibitech</groupId>
 			<artifactId>framework-core</artifactId>
 			<version>1.0</version>
-		</dependency> -->
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
 		<dependency>
 			<groupId>io.netty</groupId>

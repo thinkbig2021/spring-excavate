@@ -2,7 +2,6 @@ package com.yumeng.spring.extendstest;
 
 import java.io.IOException;
 
-import com.zhibitech.framework.core.exception.ServiceException;
 
 public class ControllerMappingExceptionResolver extends SecurityAccessExceptionResolver {
 
@@ -25,10 +24,10 @@ public class ControllerMappingExceptionResolver extends SecurityAccessExceptionR
 			return true;
 		}
 
-		// 判读是否是service层异常
-		if (ex instanceof ServiceException) {
-			return true;
-		}
+//		// 判读是否是service层异常
+//		if (ex instanceof ServiceException) {
+//			return true;
+//		}
 
 		return false;
 	}

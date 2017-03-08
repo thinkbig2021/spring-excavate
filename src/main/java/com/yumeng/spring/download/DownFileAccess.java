@@ -1,8 +1,9 @@
 package com.yumeng.spring.download;
 
-import java.io.*;
-
-import com.hp.hpl.sparta.Document.Index;
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.io.Serializable;
 
 /**
  * 文件对象
