@@ -4,10 +4,6 @@ package com.yumeng.spring.proxy;
 import java.io.Serializable;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.util.Map;
-
-import org.apache.ibatis.reflection.ExceptionUtil;
-import org.apache.ibatis.session.SqlSession;
 
 public class MapperProxy<T> implements InvocationHandler, Serializable {
 
