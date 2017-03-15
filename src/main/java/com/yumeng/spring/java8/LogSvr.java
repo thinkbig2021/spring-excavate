@@ -31,7 +31,7 @@ public class LogSvr {
 
     public static void main(String[] args) {
         LogSvr logsvr = new LogSvr();
-        File file = new File("/Users/yumeng/Documents/test.txt");
+        File file = new File("/Users/yumeng/Documents/test/test.txt");
         ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
         ScheduledFuture<?> scheduledFuture = executorService.scheduleWithFixedDelay(() -> {
             try {

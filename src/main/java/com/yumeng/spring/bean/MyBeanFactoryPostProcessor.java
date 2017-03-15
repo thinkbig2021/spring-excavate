@@ -10,8 +10,8 @@ public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor{
 	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
 		// TODO Auto-generated method stub
 		System.err.println("MyBeanFactoryPostProcessor");
-		User2 u = (User2)beanFactory.getBean("user2");
-		u.setName("hahahaa");
+//		User2 u = (User2)beanFactory.getBean("user2");
+//		u.setName("hahahaa");
 		
 	}
 

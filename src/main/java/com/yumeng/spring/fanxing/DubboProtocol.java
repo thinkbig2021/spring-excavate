@@ -1,8 +1,9 @@
 package com.yumeng.spring.fanxing;
 
-import java.net.URL;
 
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion.User;
+import com.yumeng.spring.bean.User;
+
+import java.net.URL;
 
 public class DubboProtocol {
 	public <T> Invoker<T> refer(Class<T> serviceType, URL url) {
