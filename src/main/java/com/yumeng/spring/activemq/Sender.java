@@ -1,22 +1,16 @@
 package com.yumeng.spring.activemq;
-import java.util.concurrent.TimeUnit;
-
-import javax.jms.Connection;
-import javax.jms.ConnectionFactory;
-import javax.jms.DeliveryMode;
-import javax.jms.Destination;
-import javax.jms.MessageProducer;
-import javax.jms.Session;
-import javax.jms.TextMessage;
+import com.google.common.base.Stopwatch;
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
-import com.google.common.base.Stopwatch;
+import javax.jms.*;
+import java.util.concurrent.TimeUnit;
 
 public class Sender {
     private static final int SEND_NUMBER = 5;
 
     public static void main(String[] args) {
+
         // ConnectionFactory ：连接工厂，JMS 用它创建连接
         ConnectionFactory connectionFactory;
         // Connection ：JMS 客户端到JMS Provider 的连接
